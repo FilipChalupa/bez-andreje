@@ -28,14 +28,10 @@ import {
 
 // The following line imports the type only - it will be removed by tsc so
 // another import for app-drawer.js is required below.
-import { AppDrawerElement } from '@polymer/app-layout/app-drawer/app-drawer.js';
 
 // These are the elements needed by this element.
-import '@polymer/app-layout/app-drawer/app-drawer.js';
-import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
-import { menuIcon } from './my-icons.js';
 import './snack-bar.js';
 
 @customElement('my-app')
@@ -45,9 +41,6 @@ export class MyApp extends connect(store)(LitElement) {
 
   @property({type: String})
   private _page = '';
-
-  @property({type: Boolean})
-  private _drawerOpened = false;
 
   @property({type: Boolean})
   private _snackbarOpened = false;
@@ -157,7 +150,6 @@ export class MyApp extends connect(store)(LitElement) {
         }
 
         .main-content {
-          padding-top: 64px;
           min-height: 100vh;
         }
 
@@ -187,10 +179,6 @@ export class MyApp extends connect(store)(LitElement) {
             display: none;
           }
 
-          .main-content {
-            padding-top: 107px;
-          }
-
           /* The drawer button isn't shown in the wide layout, so we don't
           need to offset the title */
           [main-title] {
@@ -204,32 +192,6 @@ export class MyApp extends connect(store)(LitElement) {
   protected render() {
     // Anything that's related to rendering should be done in here.
     return html`
-      <!-- Header -->
-      <app-header condenses reveals effects="waterfall">
-        <app-toolbar class="toolbar-top">
-          <button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
-          <div main-title>${this.appTitle}</div>
-        </app-toolbar>
-
-        <!-- This gets hidden on a small screen-->
-        <nav class="toolbar-list">
-          <a ?selected="${this._page === 'view1'}" href="/view1">View One</a>
-          <a ?selected="${this._page === 'view2'}" href="/view2">View Two</a>
-          <a ?selected="${this._page === 'view3'}" href="/view3">View Three</a>
-        </nav>
-      </app-header>
-
-      <!-- Drawer content -->
-      <app-drawer
-          .opened="${this._drawerOpened}"
-          @opened-changed="${this._drawerOpenedChanged}">
-        <nav class="drawer-list">
-          <a ?selected="${this._page === 'view1'}" href="/view1">View One</a>
-          <a ?selected="${this._page === 'view2'}" href="/view2">View Two</a>
-          <a ?selected="${this._page === 'view3'}" href="/view3">View Three</a>
-        </nav>
-      </app-drawer>
-
       <!-- Main content -->
       <main role="main" class="main-content">
         <my-view1 class="page" ?active="${this._page === 'view1'}"></my-view1>
@@ -238,10 +200,6 @@ export class MyApp extends connect(store)(LitElement) {
         <view-reader class="page" ?active="${this._page === 'ctecka'}"></view-reader>
         <my-view404 class="page" ?active="${this._page === 'view404'}"></my-view404>
       </main>
-
-      <footer>
-        <p>Made with &hearts; by the Polymer team.</p>
-      </footer>
 
       <snack-bar ?active="${this._snackbarOpened}">
         Jste ${this._offline ? 'offline' : 'online'}.
@@ -274,18 +232,9 @@ export class MyApp extends connect(store)(LitElement) {
     }
   }
 
-  private _menuButtonClicked() {
-    store.dispatch(updateDrawerState(true));
-  }
-
-  private _drawerOpenedChanged(e: Event) {
-    store.dispatch(updateDrawerState((e.target as AppDrawerElement).opened));
-  }
-
   stateChanged(state: RootState) {
     this._page = state.app!.page;
     this._offline = state.app!.offline;
     this._snackbarOpened = state.app!.snackbarOpened;
-    this._drawerOpened = state.app!.drawerOpened;
   }
 }
