@@ -14,6 +14,7 @@ export const SharedStyles = css`
   :host {
     display: block;
     box-sizing: border-box;
+    text-align: center;
   }
 
   section {

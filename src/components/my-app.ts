@@ -235,6 +235,7 @@ export class MyApp extends connect(store)(LitElement) {
         <my-view1 class="page" ?active="${this._page === 'view1'}"></my-view1>
         <my-view2 class="page" ?active="${this._page === 'view2'}"></my-view2>
         <my-view3 class="page" ?active="${this._page === 'view3'}"></my-view3>
+        <view-reader class="page" ?active="${this._page === 'ctecka'}"></view-reader>
         <my-view404 class="page" ?active="${this._page === 'view404'}"></my-view404>
       </main>
 
@@ -243,7 +244,7 @@ export class MyApp extends connect(store)(LitElement) {
       </footer>
 
       <snack-bar ?active="${this._snackbarOpened}">
-        You are now ${this._offline ? 'offline' : 'online'}.
+        Jste ${this._offline ? 'offline' : 'online'}.
       </snack-bar>
     `;
   }
