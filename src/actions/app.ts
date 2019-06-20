@@ -55,6 +55,12 @@ const loadPage: ActionCreator<ThunkResult> = (page: string) => (dispatch) => {
     case 'ctecka':
       import('../components/view-reader.js');
       break;
+    case 'babisovo':
+      import('../components/view-danger.js');
+      break;
+    case 'cajk':
+      import('../components/view-safe.js');
+      break;
     default:
       page = 'view404';
       import('../components/my-view404.js');

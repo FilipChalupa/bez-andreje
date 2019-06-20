@@ -198,6 +198,8 @@ export class MyApp extends connect(store)(LitElement) {
         <my-view2 class="page" ?active="${this._page === 'view2'}"></my-view2>
         <my-view3 class="page" ?active="${this._page === 'view3'}"></my-view3>
         <view-reader class="page" ?active="${this._page === 'ctecka'}"></view-reader>
+        <view-danger class="page" ?active="${this._page === 'babisovo'}"></view-danger>
+        <view-safe class="page" ?active="${this._page === 'cajk'}"></view-safe>
         <my-view404 class="page" ?active="${this._page === 'view404'}"></my-view404>
       </main>
 
@@ -223,7 +225,7 @@ export class MyApp extends connect(store)(LitElement) {
 
   protected updated(changedProps: PropertyValues) {
     if (changedProps.has('_page')) {
-      const pageTitle = this.appTitle + ' - ' + this._page;
+      const pageTitle = this.appTitle // + ' - ' + this._page;
       updateMetadata({
         title: pageTitle,
         description: pageTitle
