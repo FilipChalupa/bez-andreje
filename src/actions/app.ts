@@ -58,7 +58,7 @@ const loadPage: ActionCreator<ThunkResult> = (page: string) => (dispatch) => {
     case 'babisovo':
       import('../components/view-danger.js');
       break;
-    case 'cajk':
+    case 'ok':
       import('../components/view-safe.js');
       break;
     default:

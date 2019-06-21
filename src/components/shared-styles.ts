@@ -58,3 +58,34 @@ export const SharedStyles = css`
     line-height: 64px;
   }
 `;
+
+export const SharedResultStyles = css`
+	section {
+		padding: 1em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		min-height: 100vh;
+		box-sizing: border-box;
+	}
+	
+	section::before {
+		content: '';
+		flex-grow: 1;
+	}
+	
+	section::after{
+		content: '';
+		flex-grow: 2;
+	}
+
+	a {
+		margin-top: 1em;
+	}
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+`

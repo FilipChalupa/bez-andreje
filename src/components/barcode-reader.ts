@@ -55,7 +55,7 @@ export class BarcodeReader extends LitElement {
 			location.href = '/babisovo'
 		} else {
 			console.log('no match Is safe')
-			location.href = '/cajk'
+			location.href = '/ok'
 		}
 	}
 
