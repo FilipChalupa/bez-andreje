@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { html, customElement } from 'lit-element';
+import { html, customElement, css } from 'lit-element';
 import { PageViewElement } from './page-view-element.js';
 import '@polymer/paper-button';
 
@@ -19,13 +19,37 @@ import { SharedStyles } from './shared-styles.js';
 export class MyView1 extends PageViewElement {
   static get styles() {
     return [
-      SharedStyles
+      SharedStyles,
+      css`
+        section {
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        
+        section::before {
+          content: '';
+          flex-grow: 1;
+        }
+        
+        section::after{
+          content: '';
+          flex-grow: 2;
+        }
+        
+        img {
+          flex-shrink: 0;
+        }
+      `
     ];
   }
 
   protected render() {
     return html`
       <section>
+        <img src="images/manifest/icon-512x512.png" width="256" height="256" alt="Logo">
         <h2>Bez Andreje</h2>
         <p>Zjistěte, jestli zboží, které chcete koupit, vyrobil Andrej.</p>
         <a href="/ctecka" tabindex="-1" style="text-decoration: none; color: inherit;">
