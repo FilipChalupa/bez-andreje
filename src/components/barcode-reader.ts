@@ -71,6 +71,50 @@ export class BarcodeReader extends LitElement {
 					bottom: 0;
 					left: 0;
 					right: 0;
+					background-color: #000000;
+				}
+
+				.content {
+					position: fixed;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					display: flex;
+					flex-direction: column;
+				}
+				
+				.content::before {
+					content: '';
+					flex-grow: 1;
+					background-color: rgba(255, 255, 255, 0.3);
+				}
+				
+				.content::after {
+					content: '';
+					flex-grow: 2;
+					background-color: rgba(255, 255, 255, 0.3);
+				}
+
+				h1 {
+					margin: 0;
+					padding: 0 1em 5vh;
+					background-color: rgba(255, 255, 255, 0.3);
+					text-align: center;
+					line-height: 1.2;
+				}
+				
+				.frame {
+					display: flex;
+					justify-content: space-between;
+					height: 25vw;
+				}
+				
+				.frame::before,
+				.frame::after {
+					content: '';
+					width: 10vw;
+					background-color: rgba(255, 255, 255, 0.3);
 				}
 			`
 		]
@@ -79,6 +123,14 @@ export class BarcodeReader extends LitElement {
 	protected render() {
 		return html`
 			<video id="video" width="600" height="400"></video>
+			<div class="content">
+				<h1>
+					Namiřte kameru
+					<br>
+					na čárový kód
+				</h1>
+				<div class="frame"></div>
+			</div>
 		`;
 	}
 }
