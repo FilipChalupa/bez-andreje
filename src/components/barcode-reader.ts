@@ -87,19 +87,19 @@ export class BarcodeReader extends LitElement {
 				.content::before {
 					content: '';
 					flex-grow: 1;
-					background-color: rgba(255, 255, 255, 0.3);
+					background-color: rgba(255, 255, 255, 0.5);
 				}
 				
 				.content::after {
 					content: '';
 					flex-grow: 2;
-					background-color: rgba(255, 255, 255, 0.3);
+					background-color: rgba(255, 255, 255, 0.5);
 				}
 
 				h1 {
 					margin: 0;
 					padding: 0 1em 5vh;
-					background-color: rgba(255, 255, 255, 0.3);
+					background-color: rgba(255, 255, 255, 0.5);
 					text-align: center;
 					line-height: 1.2;
 				}
@@ -114,7 +114,7 @@ export class BarcodeReader extends LitElement {
 				.frame::after {
 					content: '';
 					width: 10vw;
-					background-color: rgba(255, 255, 255, 0.3);
+					background-color: rgba(255, 255, 255, 0.5);
 				}
 			`
 		]
