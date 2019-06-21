@@ -4,8 +4,8 @@
   "description": "Zjistěte, jestli zboží, které chcete koupit, vyrobil Andrej.",
   "start_url": "/ctecka",
   "display": "standalone",
-  "theme_color": "#3f51b5",
-  "background_color": "#3f51b5",
+  "theme_color": "#5c9234",
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "images/manifest/icon-192x192.png",
