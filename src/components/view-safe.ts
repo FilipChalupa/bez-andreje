@@ -10,6 +10,12 @@ export class ViewSafe extends PageViewElement {
 	static get styles() {
 		return [
 			SharedResultStyles,
+			css`
+				a {
+					text-decoration: none;
+					color: inherit;
+				}
+			`,
 		]
 	}
 
@@ -18,7 +24,7 @@ export class ViewSafe extends PageViewElement {
 			<section>
 				<img src="images/safe.svg" width="300" height="300" alt="">
 			  <h1>Bez Babiše</h1>
-        <a href="/ctecka" tabindex="-1" style="text-decoration: none; color: inherit;">
+        <a href="/ctecka" tabindex="-1">
             <paper-button raised>Zpět</paper-button>
         </a>
 			</section>
