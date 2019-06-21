@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "xyz.appmaker.ieiima",
+      "sha256_cert_fingerprints": ["AA:93:6F:2C:0B:D7:80:03:31:3C:43:64:4E:D9:47:58:0D:7A:F4:50:34:C3:4C:5F:B0:5F:CF:54:A3:A1:21:2B"]
+    }
+  }
+]
