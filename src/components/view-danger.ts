@@ -1,4 +1,4 @@
-import {html, customElement, css} from 'lit-element';
+import {html, customElement} from 'lit-element';
 import { PageViewElement } from './page-view-element.js';
 
 import '@polymer/paper-button';
