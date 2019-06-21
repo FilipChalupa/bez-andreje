@@ -22,11 +22,13 @@ export class ViewSafe extends PageViewElement {
 	protected render() {
 		return html`
 			<section>
-				<img src="images/safe.svg" width="300" height="300" alt="">
+				<div class="image">
+					<img src="images/safe.svg" alt="">
+				</div>
 			  <h1>Bez Babiše</h1>
-        <a href="/ctecka" tabindex="-1">
-            <paper-button raised>Zpět</paper-button>
-        </a>
+				<a href="/ctecka" tabindex="-1">
+					<paper-button raised>Zpět</paper-button>
+				</a>
 			</section>
       
     `;

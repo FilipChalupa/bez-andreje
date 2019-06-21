@@ -16,7 +16,9 @@ export class ViewDanger extends PageViewElement {
 	protected render() {
 		return html`
 			<section>
-				<img src="images/danger.svg" width="300" height="300" alt="">
+				<div class="image">
+					<img src="images/danger.svg" alt="">
+				</div>
 			  <h1>Babišovo</h1>
         <a href="/ctecka" tabindex="-1" style="text-decoration: none; color: inherit;">
             <paper-button raised>Zpět</paper-button>

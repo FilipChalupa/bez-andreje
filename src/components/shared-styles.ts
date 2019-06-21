@@ -88,4 +88,24 @@ export const SharedResultStyles = css`
 		max-width: 100%;
 		height: auto;
 	}
+	
+	.image {
+		width: 100%;
+		max-width: 300px;
+		position: relative;
+	}
+	
+	.image::before {
+		content: '';
+		padding-top: 100%;
+		display: block;
+	}
+	
+	.image img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
 `
