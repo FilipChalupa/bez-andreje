@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 export const SharedStyles = css`
   :host {
@@ -60,52 +60,52 @@ export const SharedStyles = css`
 `;
 
 export const SharedResultStyles = css`
-	section {
-		padding: 1em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		min-height: 100vh;
-		box-sizing: border-box;
-	}
-	
-	section::before {
-		content: '';
-		flex-grow: 1;
-	}
-	
-	section::after{
-		content: '';
-		flex-grow: 2;
-	}
+  section {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
 
-	a {
-		margin-top: 1em;
-	}
-	
-	img {
-		max-width: 100%;
-		height: auto;
-	}
-	
-	.image {
-		width: 100%;
-		max-width: 300px;
-		position: relative;
-	}
-	
-	.image::before {
-		content: '';
-		padding-top: 100%;
-		display: block;
-	}
-	
-	.image img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-	}
-`
+  section::before {
+    content: "";
+    flex-grow: 1;
+  }
+
+  section::after {
+    content: "";
+    flex-grow: 2;
+  }
+
+  a {
+    margin-top: 1em;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+  }
+
+  .image::before {
+    content: "";
+    padding-top: 100%;
+    display: block;
+  }
+
+  .image img {
+    position: absolute;
+    top: 0;
+    left: -3%;
+    right: 3%;
+    bottom: 0;
+  }
+`;
