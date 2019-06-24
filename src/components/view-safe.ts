@@ -25,7 +25,7 @@ export class ViewSafe extends PageViewElement {
 				<div class="image">
 					<img src="images/safe.svg" alt="">
 				</div>
-			  <h1>Bez Babiše</h1>
+			  <h1>Bez Andreje</h1>
 				<a href="/ctecka" tabindex="-1">
 					<paper-button raised>Zpět</paper-button>
 				</a>
