@@ -13,6 +13,7 @@ module.exports = {
     'manifest.json',
     'src/**/*',
     'images/*',
+    'images/manifest/icon-512x512.png',
   ],
   runtimeCaching: [
     {
