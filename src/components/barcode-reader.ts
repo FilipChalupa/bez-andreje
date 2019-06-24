@@ -59,10 +59,8 @@ export class BarcodeReader extends LitElement {
         return code.startsWith(prefix.toString());
       })
     ) {
-      console.log("match Babišovo");
-      location.href = "/babisovo";
+      location.href = "/andrejovo";
     } else {
-      console.log("no match Is safe");
       location.href = "/ok";
     }
   }

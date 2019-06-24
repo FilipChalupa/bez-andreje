@@ -19,7 +19,7 @@ export class ViewDanger extends PageViewElement {
 				<div class="image">
 					<img src="images/danger.svg" alt="">
 				</div>
-			  <h1>Babišovo</h1>
+			  <h1>Andrejovo</h1>
         <a href="/ctecka" tabindex="-1" style="text-decoration: none; color: inherit;">
             <paper-button raised>Zpět</paper-button>
         </a>

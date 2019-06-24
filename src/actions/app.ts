@@ -55,7 +55,7 @@ const loadPage: ActionCreator<ThunkResult> = (page: string) => (dispatch) => {
     case 'ctecka':
       import('../components/view-reader.js');
       break;
-    case 'babisovo':
+    case 'andrejovo':
       import('../components/view-danger.js');
       break;
     case 'ok':
